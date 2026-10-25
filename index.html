@@ -1,268 +1,1604 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BendoMarket Privacy Policy explaining how personal information is collected, used, and protected.">
-  <title>BendoMarket Privacy Policy</title>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="BendoMarket Privacy Policy in English and French. Learn how we collect, use, share, retain, and protect personal information and how to request account deletion."
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <meta name="theme-color" content="#a85b00" />
+
+  <title>BendoMarket Privacy Policy | Politique de confidentialité</title>
+
   <style>
+    :root {
+      --primary: #a85b00;
+      --primary-dark: #804500;
+      --background: #fffaf3;
+      --surface: #ffffff;
+      --text: #242424;
+      --muted: #606060;
+      --border: #e7dfd3;
+      --notice: #fff4d9;
+      --notice-border: #e99b18;
+      --danger: #8d2727;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 900px;
+      margin: 0;
+      padding: 24px 16px 40px;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        Helvetica,
+        sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--primary-dark);
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid #e99b18;
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 24px;
-      color: #222;
-      line-height: 1.7;
+      padding: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px rgba(50, 30, 0, 0.04);
+    }
+
+    .brand {
+      margin-bottom: 8px;
+      color: var(--primary);
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--primary);
+      line-height: 1.35;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
+
+    h2 {
+      margin-top: 36px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      font-size: 1.4rem;
+    }
+
+    h3 {
+      margin-top: 24px;
+      font-size: 1.08rem;
+    }
+
+    p {
+      margin: 14px 0;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .updated {
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .language-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin: 24px 0;
+      padding: 16px;
+      background: #fff7eb;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .language-bar strong {
+      margin-right: 4px;
+    }
+
+    .language-button {
+      min-height: 42px;
+      padding: 9px 18px;
+      color: var(--primary-dark);
       background: #fff;
+      border: 1px solid var(--primary);
+      border-radius: 7px;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
     }
-    h1, h2 { color: #a85b00; }
-    h1 { line-height: 1.3; }
-    a { color: #8a4b00; }
+
+    .language-button[aria-pressed="true"] {
+      color: #fff;
+      background: var(--primary);
+    }
+
     .notice {
-      padding: 14px;
-      background: #fff7e6;
-      border-left: 4px solid #e99b18;
+      margin: 24px 0;
+      padding: 16px 18px;
+      background: var(--notice);
+      border-left: 4px solid var(--notice-border);
+      border-radius: 5px;
     }
+
+    .deletion-box {
+      margin: 24px 0;
+      padding: 22px;
+      background: #fff8ef;
+      border: 1px solid #e6c49d;
+      border-radius: 10px;
+    }
+
+    .button-link {
+      display: inline-block;
+      margin: 8px 0;
+      padding: 12px 18px;
+      color: #fff;
+      background: var(--primary);
+      border-radius: 7px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button-link:hover {
+      background: var(--primary-dark);
+      text-decoration: none;
+    }
+
+    .contact-card {
+      padding: 18px;
+      background: #fafafa;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .contact-card p {
+      margin: 7px 0;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .language-content[hidden] {
+      display: none !important;
+    }
+
     footer {
       margin-top: 40px;
       padding-top: 20px;
-      border-top: 1px solid #ddd;
-      font-size: 0.95rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 12px 8px 24px;
+        font-size: 15px;
+      }
+
+      .container {
+        padding: 20px 16px;
+        border-radius: 8px;
+      }
+
+      .language-bar {
+        align-items: stretch;
+      }
+
+      .language-button {
+        flex: 1;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: #fff;
+      }
+
+      .container {
+        max-width: none;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+      }
+
+      .language-bar,
+      .button-link {
+        display: none;
+      }
+
+      .language-content[hidden] {
+        display: block !important;
+      }
     }
   </style>
 </head>
+
 <body>
+  <main class="container">
+    <div class="brand">BendoMarket</div>
 
-  <h1>BendoMarket Privacy Policy</h1>
+    <div class="language-bar" aria-label="Language selection">
+      <strong>Language / Langue :</strong>
 
-  <p><strong>Last updated:</strong> October 23, 2026</p>
+      <button
+        type="button"
+        class="language-button"
+        id="englishButton"
+        aria-pressed="true"
+        aria-controls="englishPolicy"
+      >
+        English
+      </button>
 
-  <p>
-    BendoMarket is a mobile marketplace that allows users to explore products
-    and shops, list second-hand items, manage orders, and access seller or
-    shop-owner services.
-  </p>
+      <button
+        type="button"
+        class="language-button"
+        id="frenchButton"
+        aria-pressed="false"
+        aria-controls="frenchPolicy"
+      >
+        Français
+      </button>
+    </div>
 
-  <p>
-    This Privacy Policy explains how BendoMarket collects, uses, stores, and
-    discloses personal information when you use the application.
-  </p>
+    <!-- ======================================================
+         ENGLISH PRIVACY POLICY
+         ====================================================== -->
 
-  <h2>1. Information We Collect</h2>
+    <article
+      id="englishPolicy"
+      class="language-content"
+      lang="en"
+    >
+      <h1>BendoMarket Privacy Policy</h1>
 
-  <p>Depending on how you use BendoMarket, the information collected may include:</p>
+      <p class="updated">
+        <strong>Last updated:</strong> October 25, 2026
+      </p>
 
-  <ul>
-    <li>
-      <strong>Account information:</strong> first name, last name, email
-      address, phone number, physical address, and password.
-    </li>
-    <li>
-      <strong>Profile information:</strong> information you provide when
-      managing your account, including profile details and, where applicable,
-      a profile image.
-    </li>
-    <li>
-      <strong>Order and delivery information:</strong> information necessary
-      to manage purchases, orders, and delivery arrangements.
-    </li>
-    <li>
-      <strong>Product and listing information:</strong> details, descriptions,
-      and images you submit when listing products or second-hand items.
-    </li>
-    <li>
-      <strong>Subscription payment information:</strong> the payment method
-      selected, the payer's phone number, transaction reference, and uploaded
-      payment receipt when subscribing to a seller or shop-owner plan.
-    </li>
-    <li>
-      <strong>Contact information:</strong> your name, email address, and
-      message when you contact us through the application's contact form.
-    </li>
-    <li>
-      <strong>Support and communications:</strong> information you provide
-      when contacting us about an account, order, or other issue.
-    </li>
-  </ul>
+      <p>
+        BendoMarket is a mobile marketplace that enables users to
+        discover shops and products, list second-hand items, place
+        and manage orders, and access seller, shop-owner, and
+        delivery services.
+      </p>
 
-  <p>
-    Please do not include passwords, PIN codes, or other authentication
-    secrets in payment receipts or support messages.
-  </p>
+      <p>
+        This Privacy Policy explains how BendoMarket collects,
+        uses, stores, shares, and protects personal information
+        when you use our mobile application and related services.
+        It also explains your choices and how to request account
+        deletion.
+      </p>
 
-  <h2>2. How We Use Information</h2>
+      <p>
+        By using BendoMarket, you acknowledge that you have had
+        the opportunity to read this policy. Where applicable
+        law requires consent for a particular processing activity,
+        we will request that consent separately.
+      </p>
 
-  <p>We use personal information, as applicable, to:</p>
+      <h2>1. Who Is Responsible for Your Information?</h2>
 
-  <ul>
-    <li>Create and manage user, seller, and shop-owner accounts.</li>
-    <li>Authenticate users and maintain account security.</li>
-    <li>Display and manage product listings and shop information.</li>
-    <li>Process orders and coordinate delivery.</li>
-    <li>Review subscription payments and manage subscriptions.</li>
-    <li>Respond to questions, contact requests, and support messages.</li>
-    <li>Maintain, troubleshoot, and improve the application's services.</li>
-    <li>Address security issues, fraud, disputes, and legal obligations.</li>
-  </ul>
+      <p>
+        BendoMarket is responsible for the personal information
+        processed through the application, subject to applicable
+        law.
+      </p>
 
-  <h2>3. Payments</h2>
+      <p>
+        For privacy questions, requests, or complaints, use the
+        contact details in the
+        <a href="#englishContact">Contact Us</a>
+        section below.
+      </p>
 
-  <p>
-    BendoMarket displays payment options that include MTN Mobile Money,
-    Orange Money, and cash on delivery. Subscription registration may also
-    require a payer phone number, transaction reference, and payment receipt.
-  </p>
+      <h2>2. Information We Collect</h2>
 
-  <p>
-    Payment information is used for the relevant transaction, payment
-    verification, order fulfilment, or subscription administration.
-    The exact information processed by payment providers depends on the
-    payment method and the transaction.
-  </p>
+      <p>
+        The information we process depends on the features you
+        use and the information you choose or are required to
+        provide.
+      </p>
 
-  <p>
-    BendoMarket does not request your mobile-money PIN through the
-    registration form. Never share your PIN with us.
-  </p>
+      <h3>2.1 Account and profile information</h3>
 
-  <h2>4. When Information May Be Shared</h2>
+      <ul>
+        <li>First name and last name.</li>
+        <li>Email address and telephone number.</li>
+        <li>Physical or delivery address, where provided.</li>
+        <li>Account credentials and authentication information.</li>
+        <li>Profile information and profile image, where applicable.</li>
+        <li>Account type and account-related settings.</li>
+      </ul>
 
-  <p>
-    Personal information may need to be disclosed to relevant parties to
-    operate the marketplace, for example:
-  </p>
+      <p>
+        Passwords should be protected using appropriate security
+        measures. We do not ask you to send your password or
+        mobile-money PIN through customer support.
+      </p>
 
-  <ul>
-    <li>
-      Sellers, shop owners, or delivery personnel, where information is
-      necessary to fulfil an order or arrange delivery.
-    </li>
-    <li>
-      Service providers that host, operate, or support the application,
-      where they process information on our behalf.
-    </li>
-    <li>
-      Payment providers or transaction recipients, where necessary to
-      complete or verify a payment.
-    </li>
-    <li>
-      Public authorities or other parties where disclosure is required
-      by applicable law or is necessary to protect rights and safety.
-    </li>
-  </ul>
+      <h3>2.2 Product, shop, and listing information</h3>
 
-  <p>
-    We do not sell personal information. Information is shared only as
-    appropriate for the purposes described in this policy, subject to
-    applicable law and the actual operation of the service.
-  </p>
+      <ul>
+        <li>Shop names and shop-related information.</li>
+        <li>Product names, descriptions, prices, and quantities.</li>
+        <li>Product options, such as sizes and colours, where applicable.</li>
+        <li>Images and other content submitted with product listings.</li>
+        <li>Information submitted when listing second-hand items.</li>
+      </ul>
 
-  <h2>5. Data Storage and Security</h2>
+      <h3>2.3 Order and delivery information</h3>
 
-  <p>
-    BendoMarket uses technical and organisational measures intended to
-    protect personal information against unauthorised access, alteration,
-    disclosure, or destruction.
-  </p>
+      <ul>
+        <li>Products ordered, quantities, and order totals.</li>
+        <li>Order identifiers, statuses, and timestamps.</li>
+        <li>Delivery addresses, contact details, and delivery instructions.</li>
+        <li>Delivery-agent assignment and delivery status information.</li>
+        <li>Meeting-point details when provided for an order.</li>
+      </ul>
 
-  <p>
-    Information may be processed by the application's backend and by
-    providers used to operate the service, such as hosting or image-storage
-    services. No method of electronic storage or transmission is completely
-    secure, and absolute security cannot be guaranteed.
-  </p>
+      <p>
+        Relevant order information may be shared with the seller,
+        shop owner, or delivery agent involved in fulfilling an
+        order.
+      </p>
 
-  <h2>6. Data Retention</h2>
+      <h3>2.4 Payment and subscription information</h3>
 
-  <p>
-    Personal information should be retained only for as long as necessary
-    for the purposes for which it was collected, including account
-    administration, order fulfilment, payment verification, dispute
-    resolution, security, and applicable legal obligations.
-  </p>
+      <p>
+        Depending on the transaction, we may process:
+      </p>
 
-  <p>
-    Actual retention periods depend on the type of information and the
-    relevant operational or legal requirements.
-  </p>
+      <ul>
+        <li>Payment method selected, such as cash, MTN Mobile Money, or Orange Money.</li>
+        <li>Payment amount and transaction reference.</li>
+        <li>Payer telephone number.</li>
+        <li>Payment status and verification information.</li>
+        <li>Payment receipts uploaded for subscription verification.</li>
+        <li>Subscription plan and subscription status.</li>
+      </ul>
 
-  <h2>7. Account Deletion and Your Choices</h2>
+      <p>
+        The information processed depends on the payment method
+        and the transaction. Do not include your mobile-money PIN,
+        password, or other authentication secret in a receipt or
+        support message.
+      </p>
 
-  <p>
-    You may contact us to request deletion of your BendoMarket account and
-    associated personal information.
-  </p>
+      <h3>2.5 Communications and support</h3>
 
-  <p>
-    To submit a request, email
-    <a href="mailto:abassledesigner@gmail.com">abassledesigner@gmail.com</a>
-    using the email address associated with your account. Include
-    "Account Deletion Request" in the subject line and provide enough
-    information for us to identify your account. Do not send your password
-    or mobile-money PIN.
-  </p>
+      <p>
+        If you contact us, we may process your email address,
+        telephone number, message, and information necessary to
+        respond to your question or resolve the issue.
+      </p>
 
-  <p>
-    We may need to verify your identity before processing a request.
-    Some information may need to be retained where required by law or
-    where necessary to resolve transactions, disputes, or security issues.
-    We will handle deletion requests in accordance with applicable law.
-  </p>
+      <p>
+        We may also retain relevant communications about account
+        security, deletion requests, payment verification, and
+        order disputes where necessary.
+      </p>
 
-  <h2>8. Children's Privacy</h2>
+      <h3>2.6 Technical and diagnostic information</h3>
 
-  <p>
-    BendoMarket is not intended to be used by children who are not legally
-    permitted to use the service under applicable law. We do not knowingly
-    seek to collect personal information from children in violation of
-    applicable requirements. If you believe a child has provided personal
-    information inappropriately, please contact us.
-  </p>
+      <p>
+        When necessary to operate and secure the service, our
+        systems and the third-party components we use may process
+        technical information such as IP addresses, request
+        timestamps, device or application information, and
+        diagnostic logs.
+      </p>
 
-  <h2>9. Third-Party Services</h2>
+      <p>
+        The exact information collected depends on the application
+        version, device permissions, backend configuration, and
+        third-party services in use.
+      </p>
 
-  <p>
-    The application may rely on third-party services to provide hosting,
-    image storage, communications, payment processing, or other functionality.
-    These providers may process information as necessary to provide their
-    services, subject to their own applicable terms and privacy policies.
-  </p>
+      <p>
+        We do not claim to collect precise location, contacts,
+        microphone recordings, or other device data unless a
+        feature actually collects that information.
+      </p>
 
-  <p>
-    The providers actually used and the information shared with each provider
-    depend on the features you use.
-  </p>
+      <h2>3. How We Collect Information</h2>
 
-  <h2>10. Changes to This Policy</h2>
+      <p>Information may be collected when you:</p>
 
-  <p>
-    We may update this Privacy Policy when the application, our practices,
-    or applicable legal requirements change. The revised policy will be
-    published on this page with an updated revision date.
-  </p>
+      <ul>
+        <li>Create, access, or manage an account.</li>
+        <li>Browse shops and product listings.</li>
+        <li>Create or update a shop or product listing.</li>
+        <li>Place or fulfil an order.</li>
+        <li>Arrange a delivery or provide delivery instructions.</li>
+        <li>Submit subscription-payment information or a receipt.</li>
+        <li>Contact support or request account deletion.</li>
+        <li>Use application features that generate technical logs.</li>
+      </ul>
 
-  <h2>11. Contact Us</h2>
+      <p>
+        Information may also be provided by another participant
+        in a transaction when necessary to arrange or fulfil an
+        order, resolve a dispute, or verify a transaction.
+      </p>
 
-  <p>
-    For privacy questions, access or correction requests, or account-deletion
-    requests, contact:
-  </p>
+      <h2>4. How We Use Information</h2>
 
-  <p>
-    <strong>BendoMarket</strong><br>
-    Email:
-    <a href="mailto:abassledesigner@gmail.com">abassledesigner@gmail.com</a><br>
-    Phone:
-    <a href="tel:+237671681830">+237 671 681 830</a>
-  </p>
+      <p>Depending on the feature, we use information to:</p>
 
-  <footer>
-    <p>
-      This policy describes the intended handling of information by
-      BendoMarket. Please contact us if you have questions about how your
-      information is handled.
-    </p>
-  </footer>
+      <ul>
+        <li>Create, authenticate, and manage accounts.</li>
+        <li>Display shops, products, and second-hand listings.</li>
+        <li>Maintain listings, prices, quantities, and availability.</li>
+        <li>Process orders and coordinate delivery.</li>
+        <li>Communicate relevant order information to participants.</li>
+        <li>Verify subscription payments and manage subscriptions.</li>
+        <li>Respond to support requests and privacy inquiries.</li>
+        <li>Protect accounts, investigate suspected fraud, and resolve disputes.</li>
+        <li>Maintain, troubleshoot, and improve application reliability.</li>
+        <li>Meet applicable legal requirements and enforce legitimate rights.</li>
+        <li>Process and confirm account-deletion requests.</li>
+      </ul>
 
+      <p>
+        We do not use personal information for a purpose
+        incompatible with this policy without an appropriate
+        legal basis or consent where required.
+      </p>
+
+      <h2>5. Payments</h2>
+
+      <p>
+        BendoMarket may support cash payments and mobile-money
+        payment methods, including MTN Mobile Money and Orange
+        Money, depending on the transaction and available
+        functionality.
+      </p>
+
+      <p>
+        Payment and subscription information is used to process
+        or verify the relevant transaction, administer a
+        subscription, maintain transaction records, and resolve
+        payment-related issues.
+      </p>
+
+      <p>
+        BendoMarket does not ask users to disclose their
+        mobile-money PIN. Never share your PIN or password with
+        another person or include it in a support request.
+      </p>
+
+      <p>
+        The handling of a payment by a mobile-money operator
+        may also be subject to that operator's terms and privacy
+        practices.
+      </p>
+
+      <h2>6. When We Share Information</h2>
+
+      <p>
+        We do not sell personal information. We may disclose
+        relevant information in the following circumstances:
+      </p>
+
+      <h3>6.1 Other marketplace participants</h3>
+
+      <p>
+        We may share information needed to complete a transaction
+        with the relevant seller, shop owner, buyer, or delivery
+        agent. For example, an order may require a delivery
+        address, contact number, order details, or delivery
+        instructions.
+      </p>
+
+      <p>
+        We aim to limit this information to what is reasonably
+        necessary for the relevant marketplace activity.
+      </p>
+
+      <h3>6.2 Service providers</h3>
+
+      <p>
+        We may use service providers to host the application,
+        store submitted images, deliver emails, maintain the
+        database, monitor technical issues, or provide other
+        necessary infrastructure.
+      </p>
+
+      <p>
+        These providers may process information on our behalf
+        to provide their services, subject to applicable
+        arrangements and legal requirements.
+      </p>
+
+      <h3>6.3 Payment and telecommunications providers</h3>
+
+      <p>
+        Information may be shared with a relevant payment or
+        telecommunications provider when necessary to process,
+        verify, or investigate a transaction.
+      </p>
+
+      <h3>6.4 Legal and safety requirements</h3>
+
+      <p>
+        We may disclose information when reasonably necessary
+        to comply with applicable law, respond to lawful
+        requests, investigate fraud, protect users, or
+        establish or defend legal claims.
+      </p>
+
+      <h3>6.5 Business changes</h3>
+
+      <p>
+        If the service or its assets are transferred as part
+        of a business reorganisation or similar transaction,
+        information may be transferred where permitted by law
+        and subject to appropriate protections.
+      </p>
+
+      <h2>7. Third-Party Services and International Processing</h2>
+
+      <p>
+        BendoMarket may rely on third-party infrastructure and
+        communications providers. Depending on the services
+        actually enabled, these may include hosting, database,
+        image-storage, and email-delivery providers.
+      </p>
+
+      <p>
+        Such providers may process information in countries
+        other than your country of residence. Where required,
+        appropriate safeguards will be used for international
+        transfers.
+      </p>
+
+      <p>
+        The actual providers and processing locations depend
+        on the production configuration. Please consult the
+        providers' own privacy documentation for information
+        about their independent processing.
+      </p>
+
+      <h2>8. Data Security</h2>
+
+      <p>
+        We use technical and organisational measures intended
+        to protect information against unauthorised access,
+        loss, alteration, disclosure, or destruction.
+      </p>
+
+      <p>
+        These measures may include access controls, restricted
+        database access, authentication safeguards, and secure
+        connections where implemented.
+      </p>
+
+      <p>
+        No electronic system or transmission method is
+        completely secure. We therefore cannot guarantee
+        absolute security.
+      </p>
+
+      <p>
+        You should protect your account credentials, use a
+        secure device, and notify us if you suspect
+        unauthorised access to your account.
+      </p>
+
+      <h2>9. Data Retention</h2>
+
+      <p>
+        We retain personal information only for as long as
+        reasonably necessary for the purposes described in
+        this policy, subject to applicable legal requirements.
+      </p>
+
+      <p>Retention may depend on:</p>
+
+      <ul>
+        <li>Whether your account remains active.</li>
+        <li>Whether an order or delivery is still being completed.</li>
+        <li>Payment verification and accounting requirements.</li>
+        <li>Disputes, suspected fraud, or security investigations.</li>
+        <li>Legal obligations and the establishment or defence of claims.</li>
+      </ul>
+
+      <p>
+        We do not specify a fixed retention period for every
+        category in this policy because the appropriate period
+        depends on the type of information and the applicable
+        operational or legal requirement.
+      </p>
+
+      <h2>10. Account Deletion and Data Removal</h2>
+
+      <div class="deletion-box">
+        <h3>Request deletion of your BendoMarket account</h3>
+
+        <p>
+          You can request deletion of your account and
+          associated personal information through our
+          account-deletion website.
+        </p>
+
+        <p>
+          <a
+            class="button-link"
+            href="https://bendomarket-account-deletion-site.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Request Account Deletion
+          </a>
+        </p>
+
+        <p class="muted">
+          You may be asked to verify ownership of your account
+          using the email address associated with it.
+        </p>
+      </div>
+
+      <h3>10.1 What happens when an account is deleted?</h3>
+
+      <p>
+        Once a deletion request has been verified and processed,
+        we intend to remove the account and associated personal
+        information that is not required to be retained.
+      </p>
+
+      <p>This may include, as applicable:</p>
+
+      <ul>
+        <li>Account profile information and login credentials.</li>
+        <li>Personal contact details associated with the account.</li>
+        <li>Saved preferences and account-specific information.</li>
+        <li>Personal data stored in associated application records.</li>
+        <li>Profile images and other personal images, where applicable.</li>
+        <li>Listings and user-generated content associated with the account, subject to necessary transaction-record retention.</li>
+      </ul>
+
+      <p>
+        Some information may be retained where necessary to
+        comply with law, maintain required transaction records,
+        prevent fraud, resolve disputes, protect security, or
+        establish or defend legal claims.
+      </p>
+
+      <h3>10.2 Order and payment history</h3>
+
+      <p>
+        Deleting an account does not necessarily mean deleting
+        every historical transaction record. BendoMarket may
+        retain limited order and payment records where necessary
+        for accounting, transaction verification, dispute
+        resolution, security, or legal compliance.
+      </p>
+
+      <p>
+        Where feasible, direct links between retained
+        transaction records and the deleted account will be
+        removed or personal identifiers will be restricted
+        or anonymised. Retained information will not be kept
+        indefinitely without a valid reason.
+      </p>
+
+      <h3>10.3 How to request deletion</h3>
+
+      <ol>
+        <li>Open the account-deletion website.</li>
+        <li>Enter the email address associated with your account.</li>
+        <li>Follow the verification instructions sent to your email.</li>
+        <li>Complete the verification process to confirm the request.</li>
+      </ol>
+
+      <p>
+        Do not send your password or mobile-money PIN when
+        requesting deletion.
+      </p>
+
+      <p>
+        You can also initiate account deletion from within
+        the application through the account settings or
+        another clearly accessible account-deletion option,
+        where implemented.
+      </p>
+
+      <p>
+        If processing takes additional time, we will provide
+        information about the request status where appropriate.
+        Any information retained for legal or legitimate
+        operational reasons will be handled in accordance
+        with this policy and applicable law.
+      </p>
+
+      <h2>11. Your Privacy Rights and Choices</h2>
+
+      <p>
+        Subject to applicable law, you may have the right to:
+      </p>
+
+      <ul>
+        <li>Request access to personal information we hold about you.</li>
+        <li>Request correction of inaccurate or incomplete information.</li>
+        <li>Request deletion of your account and eligible personal information.</li>
+        <li>Object to or request restriction of certain processing activities.</li>
+        <li>Withdraw consent where processing relies on consent.</li>
+        <li>Submit a privacy complaint to the competent authority, where applicable.</li>
+      </ul>
+
+      <p>
+        To exercise a right, contact us using the details below.
+        We may need to verify your identity before responding.
+        Certain requests may be limited where the law permits
+        or requires us to retain information.
+      </p>
+
+      <h2>12. Children's Privacy</h2>
+
+      <p>
+        BendoMarket is not intended for children who are not
+        legally permitted to use the service under applicable
+        law.
+      </p>
+
+      <p>
+        We do not knowingly seek to collect children's personal
+        information in violation of applicable requirements.
+        If you believe that a child has provided information
+        inappropriately, contact us so that we can review
+        the situation and take appropriate action.
+      </p>
+
+      <h2>13. Links to Other Websites</h2>
+
+      <p>
+        The application or its communications may contain links
+        to third-party websites or services. Their privacy
+        practices are governed by their own policies.
+      </p>
+
+      <p>
+        We encourage you to review the privacy policies of
+        third-party services before providing them with
+        personal information.
+      </p>
+
+      <h2>14. Changes to This Privacy Policy</h2>
+
+      <p>
+        We may update this Privacy Policy to reflect changes
+        to the application, our information-handling practices,
+        third-party services, or applicable legal requirements.
+      </p>
+
+      <p>
+        When changes are made, we will update the date at the
+        beginning of this page. Where required by law, we will
+        provide additional notice or obtain consent.
+      </p>
+
+      <h2 id="englishContact">15. Contact Us</h2>
+
+      <p>
+        For privacy questions, data requests, or account-deletion
+        assistance, contact BendoMarket:
+      </p>
+
+      <div class="contact-card">
+        <p><strong>BendoMarket</strong></p>
+
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:abassledesigner@gmail.com">
+            abassledesigner@gmail.com
+          </a>
+        </p>
+
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:+237671681830">
+            +237 671 681 830
+          </a>
+        </p>
+
+        <p>
+          <strong>Account deletion:</strong>
+          <a
+            href="https://bendomarket-account-deletion-site.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            BendoMarket Account Deletion Website
+          </a>
+        </p>
+      </div>
+
+      <footer>
+        <p>
+          This Privacy Policy describes BendoMarket's intended
+          personal-information practices. The actual application,
+          backend, third-party services, and deletion process
+          must operate consistently with this policy and
+          applicable law.
+        </p>
+      </footer>
+    </article>
+
+    <!-- ======================================================
+         POLITIQUE DE CONFIDENTIALITÉ EN FRANÇAIS
+         ====================================================== -->
+
+    <article
+      id="frenchPolicy"
+      class="language-content"
+      lang="fr"
+      hidden
+    >
+      <h1>Politique de confidentialité de BendoMarket</h1>
+
+      <p class="updated">
+        <strong>Dernière mise à jour :</strong> 25 octobre 2026
+      </p>
+
+      <p>
+        BendoMarket est une application mobile de commerce en
+        ligne qui permet aux utilisateurs de découvrir des
+        boutiques et des produits, de publier des articles
+        d'occasion, de passer et de gérer des commandes, et
+        d'accéder aux services destinés aux vendeurs,
+        propriétaires de boutiques et livreurs.
+      </p>
+
+      <p>
+        Cette politique explique comment BendoMarket collecte,
+        utilise, conserve, partage et protège les données
+        personnelles lorsque vous utilisez notre application
+        mobile et les services associés. Elle décrit également
+        vos choix et la procédure de demande de suppression
+        de compte.
+      </p>
+
+      <p>
+        En utilisant BendoMarket, vous reconnaissez avoir eu
+        la possibilité de prendre connaissance de cette
+        politique. Lorsque la législation applicable exige
+        un consentement pour un traitement particulier, ce
+        consentement sera demandé séparément.
+      </p>
+
+      <h2>1. Responsable du traitement des données</h2>
+
+      <p>
+        BendoMarket est responsable des données personnelles
+        traitées par l'intermédiaire de l'application, sous
+        réserve de la législation applicable.
+      </p>
+
+      <p>
+        Pour toute question, demande ou réclamation relative
+        à la confidentialité, veuillez utiliser les coordonnées
+        indiquées dans la section
+        <a href="#frenchContact">Nous contacter</a>.
+      </p>
+
+      <h2>2. Données personnelles collectées</h2>
+
+      <p>
+        Les données traitées dépendent des fonctionnalités que
+        vous utilisez et des informations que vous choisissez
+        ou devez fournir.
+      </p>
+
+      <h3>2.1 Informations de compte et de profil</h3>
+
+      <ul>
+        <li>Prénom et nom.</li>
+        <li>Adresse e-mail et numéro de téléphone.</li>
+        <li>Adresse physique ou adresse de livraison, lorsqu'elle est fournie.</li>
+        <li>Identifiants et informations d'authentification du compte.</li>
+        <li>Informations de profil et photo de profil, le cas échéant.</li>
+        <li>Type de compte et paramètres associés.</li>
+      </ul>
+
+      <p>
+        Les mots de passe doivent être protégés par des mesures
+        de sécurité appropriées. Nous ne vous demandons pas
+        de transmettre votre mot de passe ou votre code PIN
+        Mobile Money au service client.
+      </p>
+
+      <h3>2.2 Informations sur les produits, boutiques et annonces</h3>
+
+      <ul>
+        <li>Noms des boutiques et informations associées.</li>
+        <li>Noms, descriptions, prix et quantités des produits.</li>
+        <li>Options des produits, notamment les tailles et couleurs, le cas échéant.</li>
+        <li>Images et autres contenus transmis avec les annonces.</li>
+        <li>Informations fournies lors de la publication d'articles d'occasion.</li>
+      </ul>
+
+      <h3>2.3 Informations sur les commandes et livraisons</h3>
+
+      <ul>
+        <li>Produits commandés, quantités et montants des commandes.</li>
+        <li>Identifiants, statuts et dates des commandes.</li>
+        <li>Adresses de livraison, coordonnées et instructions de livraison.</li>
+        <li>Informations relatives à l'affectation des livreurs et au statut de livraison.</li>
+        <li>Informations sur les points de rencontre fournis pour une commande.</li>
+      </ul>
+
+      <p>
+        Les informations pertinentes d'une commande peuvent
+        être communiquées au vendeur, au propriétaire de la
+        boutique ou au livreur chargé de son exécution.
+      </p>
+
+      <h3>2.4 Informations de paiement et d'abonnement</h3>
+
+      <p>
+        Selon la transaction, nous pouvons traiter les
+        informations suivantes :
+      </p>
+
+      <ul>
+        <li>Moyen de paiement choisi, par exemple espèces, MTN Mobile Money ou Orange Money.</li>
+        <li>Montant du paiement et référence de transaction.</li>
+        <li>Numéro de téléphone du payeur.</li>
+        <li>Statut du paiement et informations de vérification.</li>
+        <li>Justificatifs de paiement transmis pour vérifier un abonnement.</li>
+        <li>Formule et statut de l'abonnement.</li>
+      </ul>
+
+      <p>
+        Les informations traitées dépendent du moyen de
+        paiement et de la transaction. N'inscrivez jamais
+        votre code PIN Mobile Money, votre mot de passe ou
+        un autre secret d'authentification sur un justificatif
+        ou dans un message adressé au service client.
+      </p>
+
+      <h3>2.5 Communications et assistance</h3>
+
+      <p>
+        Lorsque vous nous contactez, nous pouvons traiter
+        votre adresse e-mail, votre numéro de téléphone,
+        votre message et les informations nécessaires pour
+        répondre à votre demande ou résoudre le problème.
+      </p>
+
+      <p>
+        Nous pouvons également conserver les communications
+        pertinentes relatives à la sécurité des comptes, aux
+        demandes de suppression, à la vérification des paiements
+        et aux litiges concernant les commandes, lorsque cela
+        est nécessaire.
+      </p>
+
+      <h3>2.6 Informations techniques et diagnostics</h3>
+
+      <p>
+        Pour exploiter et sécuriser le service, nos systèmes
+        et les composants tiers utilisés peuvent traiter des
+        informations techniques, notamment les adresses IP,
+        les dates et heures des requêtes, des informations sur
+        l'appareil ou l'application et des journaux techniques.
+      </p>
+
+      <p>
+        Les informations réellement collectées dépendent de
+        la version de l'application, des autorisations de
+        l'appareil, de la configuration du serveur et des
+        services tiers utilisés.
+      </p>
+
+      <p>
+        Nous ne déclarons pas collecter la localisation précise,
+        les contacts, les enregistrements du microphone ou
+        d'autres données de l'appareil si aucune fonctionnalité
+        ne collecte effectivement ces informations.
+      </p>
+
+      <h2>3. Comment les données sont-elles collectées ?</h2>
+
+      <p>Les données peuvent être collectées lorsque vous :</p>
+
+      <ul>
+        <li>Créez, consultez ou gérez un compte.</li>
+        <li>Parcourez les boutiques et les annonces de produits.</li>
+        <li>Créez ou modifiez une boutique ou une annonce.</li>
+        <li>Passez une commande ou participez à son exécution.</li>
+        <li>Organisez une livraison ou fournissez des instructions.</li>
+        <li>Transmettez des informations ou un justificatif de paiement d'abonnement.</li>
+        <li>Contactez l'assistance ou demandez la suppression d'un compte.</li>
+        <li>Utilisez des fonctionnalités générant des journaux techniques.</li>
+      </ul>
+
+      <p>
+        Des informations peuvent également être fournies par
+        un autre participant à une transaction lorsqu'elles
+        sont nécessaires à l'organisation ou à l'exécution
+        d'une commande, au règlement d'un litige ou à la
+        vérification d'une transaction.
+      </p>
+
+      <h2>4. Utilisation des données personnelles</h2>
+
+      <p>Selon la fonctionnalité concernée, nous utilisons les données pour :</p>
+
+      <ul>
+        <li>Créer, authentifier et gérer les comptes.</li>
+        <li>Afficher les boutiques, produits et annonces d'occasion.</li>
+        <li>Gérer les annonces, les prix, les quantités et la disponibilité.</li>
+        <li>Traiter les commandes et coordonner les livraisons.</li>
+        <li>Communiquer les informations nécessaires aux participants d'une commande.</li>
+        <li>Vérifier les paiements d'abonnement et gérer les abonnements.</li>
+        <li>Répondre aux demandes d'assistance et aux questions relatives aux données.</li>
+        <li>Protéger les comptes, enquêter sur les fraudes présumées et résoudre les litiges.</li>
+        <li>Maintenir, dépanner et améliorer la fiabilité de l'application.</li>
+        <li>Respecter les obligations légales applicables et faire valoir les droits légitimes.</li>
+        <li>Traiter et confirmer les demandes de suppression de compte.</li>
+      </ul>
+
+      <p>
+        Nous n'utilisons pas les données personnelles à des
+        fins incompatibles avec cette politique sans base
+        juridique appropriée ou sans consentement lorsque
+        celui-ci est requis.
+      </p>
+
+      <h2>5. Paiements</h2>
+
+      <p>
+        Selon la transaction et les fonctionnalités disponibles,
+        BendoMarket peut prendre en charge les paiements en
+        espèces et les moyens de paiement mobile, notamment
+        MTN Mobile Money et Orange Money.
+      </p>
+
+      <p>
+        Les informations de paiement et d'abonnement sont
+        utilisées pour traiter ou vérifier la transaction
+        concernée, gérer un abonnement, conserver les
+        informations transactionnelles nécessaires et
+        résoudre les problèmes liés aux paiements.
+      </p>
+
+      <p>
+        BendoMarket ne vous demande pas de communiquer votre
+        code PIN Mobile Money. Ne partagez jamais votre code
+        PIN ou votre mot de passe avec une autre personne et
+        ne les incluez pas dans une demande d'assistance.
+      </p>
+
+      <p>
+        Le traitement des paiements par un opérateur Mobile
+        Money peut également être soumis à ses propres
+        conditions et pratiques de confidentialité.
+      </p>
+
+      <h2>6. Partage des données</h2>
+
+      <p>
+        Nous ne vendons pas les données personnelles. Nous
+        pouvons communiquer les informations pertinentes
+        dans les situations suivantes.
+      </p>
+
+      <h3>6.1 Autres participants à la marketplace</h3>
+
+      <p>
+        Nous pouvons partager les informations nécessaires
+        à une transaction avec le vendeur, le propriétaire
+        de la boutique, l'acheteur ou le livreur concerné.
+        Par exemple, une commande peut nécessiter une adresse
+        de livraison, un numéro de téléphone, les détails de
+        la commande ou des instructions de livraison.
+      </p>
+
+      <p>
+        Nous cherchons à limiter ces informations à ce qui
+        est raisonnablement nécessaire à l'activité concernée.
+      </p>
+
+      <h3>6.2 Prestataires de services</h3>
+
+      <p>
+        Nous pouvons utiliser des prestataires pour héberger
+        l'application, stocker les images envoyées, envoyer
+        des e-mails, exploiter la base de données, surveiller
+        les problèmes techniques ou fournir d'autres services
+        d'infrastructure nécessaires.
+      </p>
+
+      <p>
+        Ces prestataires peuvent traiter les informations
+        pour notre compte afin de fournir leurs services,
+        sous réserve des accords applicables et des
+        obligations légales.
+      </p>
+
+      <h3>6.3 Prestataires de paiement et de télécommunications</h3>
+
+      <p>
+        Des informations peuvent être partagées avec un
+        prestataire de paiement ou de télécommunications
+        lorsque cela est nécessaire pour traiter, vérifier
+        ou examiner une transaction.
+      </p>
+
+      <h3>6.4 Obligations légales et sécurité</h3>
+
+      <p>
+        Nous pouvons communiquer des informations lorsque
+        cela est raisonnablement nécessaire pour respecter
+        la législation applicable, répondre à une demande
+        légale, enquêter sur une fraude, protéger les
+        utilisateurs ou établir ou défendre des droits en justice.
+      </p>
+
+      <h3>6.5 Évolution de l'activité</h3>
+
+      <p>
+        Si le service ou ses actifs font l'objet d'un transfert
+        dans le cadre d'une réorganisation ou d'une opération
+        similaire, des informations peuvent être transférées
+        lorsque la loi l'autorise et sous réserve de protections
+        appropriées.
+      </p>
+
+      <h2>7. Services tiers et traitements internationaux</h2>
+
+      <p>
+        BendoMarket peut s'appuyer sur des prestataires tiers
+        d'infrastructure et de communication. Selon les
+        services effectivement activés, ceux-ci peuvent
+        inclure des prestataires d'hébergement, de base de
+        données, de stockage d'images et d'envoi d'e-mails.
+      </p>
+
+      <p>
+        Ces prestataires peuvent traiter des informations dans
+        des pays autres que votre pays de résidence. Lorsque
+        la législation l'exige, des garanties appropriées
+        seront utilisées pour les transferts internationaux.
+      </p>
+
+      <p>
+        Les prestataires et les lieux de traitement réellement
+        utilisés dépendent de la configuration de production.
+        Nous vous invitons à consulter les politiques de
+        confidentialité des prestataires concernés pour
+        connaître leurs propres pratiques de traitement.
+      </p>
+
+      <h2>8. Sécurité des données</h2>
+
+      <p>
+        Nous utilisons des mesures techniques et
+        organisationnelles destinées à protéger les données
+        contre les accès non autorisés, la perte, la
+        modification, la divulgation ou la destruction.
+      </p>
+
+      <p>
+        Ces mesures peuvent notamment comprendre des contrôles
+        d'accès, une restriction de l'accès à la base de données,
+        des mécanismes d'authentification et des connexions
+        sécurisées lorsqu'ils sont mis en œuvre.
+      </p>
+
+      <p>
+        Aucun système électronique ni moyen de transmission
+        n'offre une sécurité absolue. Nous ne pouvons donc
+        pas garantir une sécurité totale.
+      </p>
+
+      <p>
+        Vous devez protéger vos identifiants, utiliser un
+        appareil sécurisé et nous avertir si vous soupçonnez
+        un accès non autorisé à votre compte.
+      </p>
+
+      <h2>9. Durée de conservation des données</h2>
+
+      <p>
+        Nous conservons les données personnelles uniquement
+        pendant la durée raisonnablement nécessaire aux
+        finalités décrites dans cette politique, sous réserve
+        des obligations légales applicables.
+      </p>
+
+      <p>La durée de conservation peut dépendre :</p>
+
+      <ul>
+        <li>Du maintien ou non de votre compte en activité.</li>
+        <li>De l'exécution en cours d'une commande ou d'une livraison.</li>
+        <li>Des obligations de vérification des paiements et de comptabilité.</li>
+        <li>Des litiges, fraudes présumées ou enquêtes de sécurité.</li>
+        <li>Des obligations légales et de la défense de droits en justice.</li>
+      </ul>
+
+      <p>
+        Cette politique ne fixe pas une durée unique pour
+        chaque catégorie de données, car la durée appropriée
+        dépend du type d'information et des exigences
+        opérationnelles ou légales applicables.
+      </p>
+
+      <h2>10. Suppression du compte et des données</h2>
+
+      <div class="deletion-box">
+        <h3>Demander la suppression de votre compte BendoMarket</h3>
+
+        <p>
+          Vous pouvez demander la suppression de votre compte
+          et des données personnelles associées à l'aide de
+          notre site de suppression de compte.
+        </p>
+
+        <p>
+          <a
+            class="button-link"
+            href="https://bendomarket-account-deletion-site.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Demander la suppression du compte
+          </a>
+        </p>
+
+        <p class="muted">
+          Il peut vous être demandé de vérifier que vous êtes
+          bien propriétaire du compte en utilisant l'adresse
+          e-mail qui lui est associée.
+        </p>
+      </div>
+
+      <h3>10.1 Que se passe-t-il lorsque le compte est supprimé ?</h3>
+
+      <p>
+        Après vérification et traitement de la demande, nous
+        avons pour objectif de supprimer le compte et les
+        données personnelles associées qui ne doivent pas
+        être conservées.
+      </p>
+
+      <p>Cela peut notamment inclure, selon le cas :</p>
+
+      <ul>
+        <li>Les informations du profil et les identifiants de connexion.</li>
+        <li>Les coordonnées personnelles associées au compte.</li>
+        <li>Les préférences enregistrées et les informations propres au compte.</li>
+        <li>Les données personnelles présentes dans les enregistrements associés de l'application.</li>
+        <li>Les photos de profil et autres images personnelles, le cas échéant.</li>
+        <li>Les annonces et contenus publiés par l'utilisateur, sous réserve de la conservation nécessaire des documents transactionnels.</li>
+      </ul>
+
+      <p>
+        Certaines informations peuvent être conservées lorsque
+        cela est nécessaire pour respecter la loi, maintenir
+        les documents transactionnels requis, prévenir la
+        fraude, résoudre des litiges, protéger la sécurité
+        ou établir ou défendre des droits en justice.
+      </p>
+
+      <h3>10.2 Historique des commandes et des paiements</h3>
+
+      <p>
+        La suppression d'un compte n'entraîne pas
+        nécessairement la suppression de tous les documents
+        relatifs aux transactions passées. BendoMarket peut
+        conserver certains documents limités concernant les
+        commandes et les paiements lorsque cela est nécessaire
+        pour la comptabilité, la vérification des transactions,
+        le règlement des litiges, la sécurité ou le respect
+        d'obligations légales.
+      </p>
+
+      <p>
+        Lorsque cela est possible, les liens directs entre
+        les documents transactionnels conservés et le compte
+        supprimé seront retirés, ou les identifiants personnels
+        seront limités ou anonymisés. Les données conservées
+        ne seront pas gardées indéfiniment sans motif valable.
+      </p>
+
+      <h3>10.3 Comment demander la suppression ?</h3>
+
+      <ol>
+        <li>Ouvrez le site de suppression de compte.</li>
+        <li>Saisissez l'adresse e-mail associée à votre compte.</li>
+        <li>Suivez les instructions de vérification envoyées par e-mail.</li>
+        <li>Terminez la vérification pour confirmer votre demande.</li>
+      </ol>
+
+      <p>
+        Ne transmettez pas votre mot de passe ou votre code
+        PIN Mobile Money lors d'une demande de suppression.
+      </p>
+
+      <p>
+        Vous pouvez également lancer la suppression depuis
+        l'application, dans les paramètres du compte ou au
+        moyen d'une autre option de suppression clairement
+        accessible, lorsque celle-ci est mise en œuvre.
+      </p>
+
+      <p>
+        Si le traitement nécessite un délai supplémentaire,
+        nous fournirons, lorsque cela est approprié, des
+        informations sur l'état de la demande. Les données
+        conservées pour des raisons légales ou opérationnelles
+        légitimes seront traitées conformément à cette
+        politique et à la législation applicable.
+      </p>
+
+      <h2>11. Vos droits et vos choix</h2>
+
+      <p>
+        Sous réserve de la législation applicable, vous pouvez
+        disposer des droits suivants :
+      </p>
+
+      <ul>
+        <li>Demander l'accès aux données personnelles que nous détenons à votre sujet.</li>
+        <li>Demander la correction de données inexactes ou incomplètes.</li>
+        <li>Demander la suppression de votre compte et des données personnelles pouvant être supprimées.</li>
+        <li>Vous opposer à certains traitements ou demander leur limitation.</li>
+        <li>Retirer votre consentement lorsque le traitement repose sur celui-ci.</li>
+        <li>Déposer une réclamation auprès de l'autorité compétente, le cas échéant.</li>
+      </ul>
+
+      <p>
+        Pour exercer vos droits, contactez-nous aux coordonnées
+        indiquées ci-dessous. Nous pouvons devoir vérifier
+        votre identité avant de répondre. Certaines demandes
+        peuvent être limitées lorsque la loi nous autorise
+        ou nous oblige à conserver des informations.
+      </p>
+
+      <h2>12. Protection des enfants</h2>
+
+      <p>
+        BendoMarket n'est pas destiné aux enfants qui ne sont
+        pas légalement autorisés à utiliser le service en
+        vertu de la législation applicable.
+      </p>
+
+      <p>
+        Nous ne cherchons pas sciemment à collecter des données
+        personnelles d'enfants en violation des exigences
+        applicables. Si vous pensez qu'un enfant a fourni
+        des informations de manière inappropriée, contactez-nous
+        afin que nous puissions examiner la situation et
+        prendre les mesures appropriées.
+      </p>
+
+      <h2>13. Liens vers des sites tiers</h2>
+
+      <p>
+        L'application ou ses communications peuvent contenir
+        des liens vers des sites ou services tiers. Leurs
+        pratiques de confidentialité sont régies par leurs
+        propres politiques.
+      </p>
+
+      <p>
+        Nous vous encourageons à consulter les politiques de
+        confidentialité des services tiers avant de leur
+        communiquer des données personnelles.
+      </p>
+
+      <h2>14. Modifications de cette politique</h2>
+
+      <p>
+        Nous pouvons modifier cette politique pour tenir
+        compte des évolutions de l'application, de nos
+        pratiques de traitement, des services tiers ou de
+        la législation applicable.
+      </p>
+
+      <p>
+        En cas de modification, la date figurant au début
+        de cette page sera mise à jour. Lorsque la loi
+        l'exige, nous fournirons une information supplémentaire
+        ou demanderons un consentement.
+      </p>
+
+      <h2 id="frenchContact">15. Nous contacter</h2>
+
+      <p>
+        Pour toute question relative à la confidentialité,
+        demande concernant vos données ou assistance pour
+        supprimer un compte, contactez BendoMarket :
+      </p>
+
+      <div class="contact-card">
+        <p><strong>BendoMarket</strong></p>
+
+        <p>
+          <strong>E-mail :</strong>
+          <a href="mailto:abassledesigner@gmail.com">
+            abassledesigner@gmail.com
+          </a>
+        </p>
+
+        <p>
+          <strong>Téléphone :</strong>
+          <a href="tel:+237671681830">
+            +237 671 681 830
+          </a>
+        </p>
+
+        <p>
+          <strong>Suppression du compte :</strong>
+          <a
+            href="https://bendomarket-account-deletion-site.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Site de suppression de compte BendoMarket
+          </a>
+        </p>
+      </div>
+
+      <footer>
+        <p>
+          Cette politique décrit les pratiques prévues de
+          BendoMarket en matière de données personnelles.
+          L'application, le serveur, les services tiers et
+          la procédure de suppression doivent fonctionner
+          conformément à cette politique et à la législation
+          applicable.
+        </p>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      "use strict";
+
+      const englishButton =
+        document.getElementById("englishButton");
+
+      const frenchButton =
+        document.getElementById("frenchButton");
+
+      const englishPolicy =
+        document.getElementById("englishPolicy");
+
+      const frenchPolicy =
+        document.getElementById("frenchPolicy");
+
+      function setLanguage(language) {
+        const isFrench = language === "fr";
+
+        englishPolicy.hidden = isFrench;
+        frenchPolicy.hidden = !isFrench;
+
+        englishButton.setAttribute(
+          "aria-pressed",
+          String(!isFrench)
+        );
+
+        frenchButton.setAttribute(
+          "aria-pressed",
+          String(isFrench)
+        );
+
+        document.documentElement.lang =
+          isFrench ? "fr" : "en";
+
+        try {
+          localStorage.setItem(
+            "bendomarket-privacy-language",
+            language
+          );
+        } catch (error) {
+          // The policy remains usable if storage is unavailable.
+        }
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
+
+      englishButton.addEventListener(
+        "click",
+        function () {
+          setLanguage("en");
+        }
+      );
+
+      frenchButton.addEventListener(
+        "click",
+        function () {
+          setLanguage("fr");
+        }
+      );
+
+      try {
+        const savedLanguage = localStorage.getItem(
+          "bendomarket-privacy-language"
+        );
+
+        if (savedLanguage === "fr") {
+          setLanguage("fr");
+        }
+      } catch (error) {
+        // English is the default language.
+      }
+    })();
+  </script>
 </body>
 </html>
